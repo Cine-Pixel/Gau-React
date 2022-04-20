@@ -5,7 +5,10 @@ const Post = ({ post, deletePost }) => {
     <div>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
-      <button value={post.id} onClick={(e) => deletePost(e.target.value)}>
+      <button
+        value={post.id}
+        onClick={(e) => deletePost(parseInt(e.target.value))}
+      >
         Delete
       </button>
     </div>
